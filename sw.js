@@ -3,7 +3,7 @@
 // Network-first for all same-origin GETs, cached app shell as offline fallback.
 // ─────────────────────────────────────────────
 
-const CACHE = 'tempmail-v5-4';
+const CACHE = 'tempmail-v5-5';
 
 const APP_SHELL = [
     './',
@@ -12,8 +12,6 @@ const APP_SHELL = [
     './js/api.js',
     './js/config.js',
     './js/theme.js',
-    './js/guard.js',
-    './js/watchdog.js',
     './images/temp-mail-icon.png',
     './images/app-icon.svg',
     './manifest.json'
