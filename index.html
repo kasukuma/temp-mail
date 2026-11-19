@@ -26,7 +26,6 @@
     <link rel="canonical" href="https://mehmetkahya0.github.io/temp-mail/" />
     <meta name="google-site-verification" content="g699KCTrbV4HAls_3j5GVsO-TDQ0n9pA6_N5rYYCww4" />
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="TempMail" />
     <meta property="og:locale" content="en_US" />
@@ -42,7 +41,6 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="TempMail inbox with a disposable address and incoming verification emails" />
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="TempMail — Free Temporary &amp; Disposable Email" />
     <meta
@@ -51,7 +49,6 @@
     />
     <meta name="twitter:image" content="https://mehmetkahya0.github.io/temp-mail/images/og-image.png" />
 
-    <!-- Structured data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -79,11 +76,6 @@
         ]
       }
     </script>
-    <script id="_wau776">
-      var _wau = _wau || [];
-      _wau.push(["dynamic", "0pakxqe3b2", "776", "c4302bffffff", "small"]);
-    </script>
-    <script async src="//waust.at/d.js"></script>
 
     <meta name="theme-color" content="#07080A" />
     <link rel="icon" href="images/app-icon.svg" type="image/svg+xml" />
@@ -92,7 +84,6 @@
     <link rel="apple-touch-icon" href="images/icon-192.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
-    <!-- Apply saved theme before first paint (prevents flash) -->
     <script>
       (function () {
         try {
@@ -106,29 +97,20 @@
       })();
     </script>
 
-    <!-- Google Fonts: Geist, Geist Mono, Instrument Serif -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Domain restriction guard (must load before app logic) -->
-    <script src="js/guard.js"></script>
-    <script src="js/watchdog.js" defer></script>
-
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <!-- Confetti -->
     <script
       src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"
       defer
@@ -137,64 +119,35 @@
 
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <!-- Ambient background: glow orbs, hairline grid, film grain -->
-    <div class="ambient" aria-hidden="true">
-      <div class="orb orb-a"></div>
-      <div class="orb orb-b"></div>
-      <div class="orb orb-c"></div>
-      <div class="grid-lines"></div>
-    </div>
+    <div class="ambient" aria-hidden="true"><div class="orb orb-a"></div><div class="orb orb-b"></div><div class="orb orb-c"></div><div class="grid-lines"></div></div>
     <div class="noise-overlay" aria-hidden="true"></div>
-
-    <!-- Toast container -->
     <div id="toast-container" class="toast-container" aria-live="polite"></div>
 
-    <!-- Floating island navigation -->
     <header class="nav-wrap" role="banner">
       <nav class="app-bar" aria-label="Primary">
         <a class="app-bar-logo" href="#main-content" aria-label="TempMail home">
-          <span class="logo-mark" aria-hidden="true">
-            <i class="fa-solid fa-at"></i>
-          </span>
+          <span class="logo-mark" aria-hidden="true"><i class="fa-solid fa-at"></i></span>
           <span class="logo-word">TempMail</span>
           <span class="app-bar-version">v5</span>
         </a>
-
         <span class="app-bar-separator" aria-hidden="true"></span>
-
         <div class="status-pill" role="status">
           <span id="status-led" class="status-led offline"></span>
           <span id="status-text" data-i18n="status_offline">Offline</span>
         </div>
-
         <div class="app-bar-right">
-          <button
-            class="cmd-trigger"
-            onclick="showCommandPalette()"
-            aria-label="Command palette"
-          >
+          <button class="cmd-trigger" onclick="showCommandPalette()" aria-label="Command palette">
             <i class="fa-solid fa-magnifying-glass"></i>
             <span class="cmd-trigger-text" data-i18n="cmd_hint">Command Palette</span>
             <kbd>⌘K</kbd>
           </button>
-
-          <button
-            id="lang-toggle"
-            class="lang-switch-btn"
-            aria-label="Switch Language"
-            data-tooltip="Türkçe"
-          >
-            <span class="lang-icon">🇺🇸</span>
-            <span class="lang-text">EN</span>
+          <button id="lang-toggle" class="lang-switch-btn" aria-label="Switch Language" data-tooltip="Türkçe">
+            <span class="lang-icon">🇺🇸</span><span class="lang-text">EN</span>
           </button>
-
           <label class="theme-toggle" data-tooltip="Theme">
             <input type="checkbox" id="theme-toggle" aria-label="Toggle dark mode" />
             <span class="theme-toggle-track" aria-hidden="true">
-              <i class="fa-solid fa-sun"></i>
-              <i class="fa-solid fa-moon"></i>
-              <span class="theme-toggle-knob"></span>
+              <i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i><span class="theme-toggle-knob"></span>
             </span>
           </label>
         </div>
@@ -203,164 +156,44 @@
 
     <div class="app-container">
       <main id="main-content" class="main-content" role="main" tabindex="-1">
-        <!-- Hero -->
         <section class="hero reveal" aria-labelledby="hero-title">
-          <h1 id="hero-title" class="hero-title" data-i18n="hero_title">
-            Your inbox, <em>off the record.</em>
-          </h1>
-          <p class="hero-sub" data-i18n="hero_sub">
-            Sign up anywhere without exposing your real email.
-          </p>
+          <h1 id="hero-title" class="hero-title" data-i18n="hero_title">Your inbox, <em>off the record.</em></h1>
+          <p class="hero-sub" data-i18n="hero_sub">Sign up anywhere without exposing your real email.</p>
         </section>
 
-        <!-- Multi-mailbox tabs -->
         <div class="mailbox-tabs-container reveal" style="--d: 200ms" id="mailbox-tabs"></div>
 
-        <!-- Bento: address + side controls -->
         <section class="bento">
-          <!-- Address card (hero) -->
           <div class="bezel bento-main reveal" style="--d: 240ms">
             <div class="bezel-core hero-email-inner">
               <div class="core-head">
-                <span class="core-label">
-                  <i class="fa-solid fa-at"></i>
-                  <span data-i18n="hero_address_label">Your address</span>
-                </span>
-                <div class="session-timer" id="session-timer" style="display: none">
-                  <i class="fa-regular fa-clock"></i>
-                  <span id="session-timer-text">00:00</span>
-                </div>
+                <span class="core-label"><i class="fa-solid fa-at"></i><span data-i18n="hero_address_label">Your address</span></span>
+                <div class="session-timer" id="session-timer" style="display: none"><i class="fa-regular fa-clock"></i><span id="session-timer-text">00:00</span></div>
               </div>
-
-              <div class="email-input-group">
-                <input
-                  id="addr"
-                  placeholder="Generating email address..."
-                  data-i18n-placeholder="generating_email"
-                  readonly
-                  spellcheck="false"
-                  aria-label="Your temporary email address"
-                  data-i18n-aria-label="aria_email_address"
-                />
-              </div>
-
-              <!-- Note for the current address ("Reddit signup") -->
+              <div class="email-input-group"><input id="addr" placeholder="Generating email address..." data-i18n-placeholder="generating_email" readonly spellcheck="false" aria-label="Your temporary email address" data-i18n-aria-label="aria_email_address" /></div>
               <div class="address-label-row" id="address-label-row"></div>
-
               <div class="address-actions">
                 <div class="button-group">
-                  <button
-                    onclick="genEmail()"
-                    class="primary-button btn-island"
-                    title="Generate new address"
-                    data-i18n-title="tooltip_new_btn"
-                  >
-                    <span data-i18n="btn_new">New Address</span>
-                    <span class="btn-icon" aria-hidden="true">
-                      <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-                  </button>
-                  <button
-                    onclick="refreshMail()"
-                    class="secondary-button"
-                    title="Refresh inbox"
-                    data-i18n-title="tooltip_refresh_btn"
-                  >
-                    <i class="fa-solid fa-rotate"></i>
-                    <span data-i18n="btn_refresh">Refresh</span>
-                  </button>
+                  <button onclick="genEmail()" class="primary-button btn-island" title="Generate new address" data-i18n-title="tooltip_new_btn"><span data-i18n="btn_new">New Address</span><span class="btn-icon" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></button>
+                  <button onclick="refreshMail()" class="secondary-button" title="Refresh inbox" data-i18n-title="tooltip_refresh_btn"><i class="fa-solid fa-rotate"></i><span data-i18n="btn_refresh">Refresh</span></button>
                 </div>
-
                 <div class="icon-row">
-                  <button
-                    onclick="copyEmail()"
-                    id="copy-btn"
-                    title="Copy email address"
-                    data-i18n-title="copy_email"
-                    class="icon-button"
-                    aria-label="Copy email address"
-                    data-i18n-aria-label="copy_email"
-                    data-tooltip="Copy"
-                    data-i18n-tooltip="tooltip_copy"
-                  >
-                    <i class="fa-regular fa-copy" id="copy-icon"></i>
-                  </button>
-                  <button
-                    onclick="showQRCodeModal()"
-                    id="qrcode-btn"
-                    title="Show QR Code"
-                    data-i18n-title="show_qrcode"
-                    class="icon-button"
-                    aria-label="Show QR Code"
-                    data-i18n-aria-label="show_qrcode"
-                    data-tooltip="QR Code"
-                    data-i18n-tooltip="tooltip_qrcode"
-                  >
-                    <i class="fa-solid fa-qrcode"></i>
-                  </button>
-                  <button
-                    onclick="showCustomAliasModal()"
-                    id="alias-btn"
-                    title="Custom Username"
-                    data-i18n-title="custom_username"
-                    class="icon-button"
-                    aria-label="Custom Username"
-                    data-i18n-aria-label="custom_username"
-                    data-tooltip="Custom Name"
-                    data-i18n-tooltip="tooltip_custom_name"
-                  >
-                    <i class="fa-regular fa-pen-to-square"></i>
-                  </button>
-                  <button
-                    onclick="showAddressHistory()"
-                    id="history-btn"
-                    title="Address history"
-                    data-i18n-title="tooltip_history"
-                    class="icon-button"
-                    aria-label="Address history"
-                    data-i18n-aria-label="tooltip_history"
-                    data-tooltip="Address history"
-                    data-i18n-tooltip="tooltip_history"
-                  >
-                    <i class="fa-solid fa-clock-rotate-left"></i>
-                  </button>
-                  <button
-                    onclick="showPrivacyReport()"
-                    id="privacy-report-btn"
-                    title="Privacy report"
-                    data-i18n-title="tooltip_privacy_report"
-                    class="icon-button"
-                    aria-label="Privacy report"
-                    data-i18n-aria-label="tooltip_privacy_report"
-                    data-tooltip="Privacy report"
-                    data-i18n-tooltip="tooltip_privacy_report"
-                  >
-                    <i class="fa-solid fa-user-shield"></i>
-                  </button>
+                  <button onclick="copyEmail()" id="copy-btn" title="Copy email address" data-i18n-title="copy_email" class="icon-button" aria-label="Copy email address" data-i18n-aria-label="copy_email" data-tooltip="Copy" data-i18n-tooltip="tooltip_copy"><i class="fa-regular fa-copy" id="copy-icon"></i></button>
+                  <button onclick="showQRCodeModal()" id="qrcode-btn" title="Show QR Code" data-i18n-title="show_qrcode" class="icon-button" aria-label="Show QR Code" data-i18n-aria-label="show_qrcode" data-tooltip="QR Code" data-i18n-tooltip="tooltip_qrcode"><i class="fa-solid fa-qrcode"></i></button>
+                  <button onclick="showCustomAliasModal()" id="alias-btn" title="Custom Username" data-i18n-title="custom_username" class="icon-button" aria-label="Custom Username" data-i18n-aria-label="custom_username" data-tooltip="Custom Name" data-i18n-tooltip="tooltip_custom_name"><i class="fa-regular fa-pen-to-square"></i></button>
+                  <button onclick="showAddressHistory()" id="history-btn" title="Address history" data-i18n-title="tooltip_history" class="icon-button" aria-label="Address history" data-i18n-aria-label="tooltip_history" data-tooltip="Address history" data-i18n-tooltip="tooltip_history"><i class="fa-solid fa-clock-rotate-left"></i></button>
+                  <button onclick="showPrivacyReport()" id="privacy-report-btn" title="Privacy report" data-i18n-title="tooltip_privacy_report" class="icon-button" aria-label="Privacy report" data-i18n-aria-label="tooltip_privacy_report" data-tooltip="Privacy report" data-i18n-tooltip="tooltip_privacy_report"><i class="fa-solid fa-user-shield"></i></button>
                 </div>
               </div>
-
-              <!-- Countdown progress bar (shown during auto-refresh) -->
-              <div id="countdown-bar-container" class="countdown-bar-container">
-                <div id="countdown-bar" class="countdown-bar"></div>
-              </div>
+              <div id="countdown-bar-container" class="countdown-bar-container"><div id="countdown-bar" class="countdown-bar"></div></div>
             </div>
           </div>
 
-          <!-- Domain -->
           <div class="bezel bento-side reveal" style="--d: 320ms">
             <div class="bezel-core side-core">
-              <span class="core-label">
-                <i class="fa-solid fa-globe"></i>
-                <span data-i18n="domain_label">Domain:</span>
-              </span>
+              <span class="core-label"><i class="fa-solid fa-globe"></i><span data-i18n="domain_label">Domain:</span></span>
               <div class="select-wrap">
-                <select
-                  id="domain-select"
-                  class="domain-select"
-                  aria-label="Select email domain"
-                  data-i18n-aria-label="aria_select_domain"
-                >
+                <select id="domain-select" class="domain-select" aria-label="Select email domain" data-i18n-aria-label="aria_select_domain">
                   <option value="random" data-i18n="domain_random">Random</option>
                   <option value="guerrillamail.com">guerrillamail.com</option>
                   <option value="guerrillamail.net">guerrillamail.net</option>
@@ -375,30 +208,14 @@
             </div>
           </div>
 
-          <!-- Auto refresh -->
           <div class="bezel bento-side reveal" style="--d: 400ms">
             <div class="bezel-core side-core auto-refresh">
-              <span class="core-label">
-                <i class="fa-solid fa-arrows-rotate"></i>
-                <span data-i18n="auto_refresh_label">Auto</span>
-                <span id="countdown" class="countdown-text"></span>
-              </span>
+              <span class="core-label"><i class="fa-solid fa-arrows-rotate"></i><span data-i18n="auto_refresh_label">Auto</span><span id="countdown" class="countdown-text"></span></span>
               <div class="auto-row">
-                <label class="toggle">
-                  <input type="checkbox" id="auto-refresh" />
-                  <span class="toggle-track" aria-hidden="true"><span class="toggle-knob"></span></span>
-                </label>
+                <label class="toggle"><input type="checkbox" id="auto-refresh" /><span class="toggle-track" aria-hidden="true"><span class="toggle-knob"></span></span></label>
                 <div class="select-wrap select-wrap-sm">
-                  <select
-                    id="refresh-interval"
-                    class="select-input"
-                    aria-label="Auto-refresh interval"
-                    data-i18n-aria-label="aria_refresh_interval"
-                  >
-                    <option value="10">10s</option>
-                    <option value="30" selected>30s</option>
-                    <option value="60">1m</option>
-                    <option value="120">2m</option>
+                  <select id="refresh-interval" class="select-input" aria-label="Auto-refresh interval" data-i18n-aria-label="aria_refresh_interval">
+                    <option value="10">10s</option><option value="30" selected>30s</option><option value="60">1m</option><option value="120">2m</option>
                   </select>
                   <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                 </div>
@@ -407,326 +224,90 @@
           </div>
         </section>
 
-        <!-- Inbox -->
         <section class="bezel inbox reveal" aria-label="Inbox">
           <div class="bezel-core inbox-core card">
             <div class="inbox-list">
               <div class="inbox-head">
-                <div class="email-count">
-                  <h3 data-i18n="inbox_label">Inbox</h3>
-                  <span id="email-count-badge" class="count-badge">0</span>
-                </div>
-
-                <div class="search-container">
-                  <div class="search-input-group">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input
-                      type="text"
-                      id="email-search"
-                      placeholder="Search emails by subject, sender..."
-                      data-i18n-placeholder="search_placeholder"
-                      aria-label="Search emails"
-                      data-i18n-aria-label="aria_search_emails"
-                    />
-                  </div>
-                </div>
-
-                <div class="inbox-actions">
-                  <button
-                    onclick="deleteAllEmails()"
-                    class="ghost-button"
-                    title="Delete all emails"
-                    data-i18n-title="tooltip_clear_all"
-                    id="delete-all-btn"
-                    style="display: none"
-                  >
-                    <i class="fa-regular fa-trash-can"></i>
-                    <span data-i18n="btn_clear_all">Clear All</span>
-                  </button>
-                </div>
+                <div class="email-count"><h3 data-i18n="inbox_label">Inbox</h3><span id="email-count-badge" class="count-badge">0</span></div>
+                <div class="search-container"><div class="search-input-group"><i class="fa-solid fa-magnifying-glass"></i><input type="text" id="email-search" placeholder="Search emails by subject, sender..." data-i18n-placeholder="search_placeholder" aria-label="Search emails" data-i18n-aria-label="aria_search_emails" /></div></div>
+                <div class="inbox-actions"><button onclick="deleteAllEmails()" class="ghost-button" title="Delete all emails" data-i18n-title="tooltip_clear_all" id="delete-all-btn" style="display: none"><i class="fa-regular fa-trash-can"></i><span data-i18n="btn_clear_all">Clear All</span></button></div>
               </div>
-
-              <!-- Quick filter chips -->
               <div class="filter-chips-container" id="filter-chips"></div>
-
-              <!-- Loading & errors -->
               <div id="loading-spinner" class="spinner hidden" style="display: none"></div>
               <div id="error-message" class="error-message hidden"></div>
-
-              <!-- Table -->
               <div class="table-container">
                 <table id="emails" aria-describedby="email-table-caption">
-                  <caption id="email-table-caption" class="visually-hidden">
-                    Temporary email inbox
-                  </caption>
-                  <thead>
-                    <tr>
-                      <th scope="col"><span data-i18n="table_id">ID</span></th>
-                      <th scope="col"><span data-i18n="table_from">From</span></th>
-                      <th scope="col"><span data-i18n="table_subject">Subject</span></th>
-                      <th scope="col"><span data-i18n="table_date">Date</span></th>
-                      <th scope="col"><span class="visually-hidden" data-i18n="table_actions">Actions</span></th>
-                    </tr>
-                  </thead>
+                  <caption id="email-table-caption" class="visually-hidden">Temporary email inbox</caption>
+                  <thead><tr><th scope="col"><span data-i18n="table_id">ID</span></th><th scope="col"><span data-i18n="table_from">From</span></th><th scope="col"><span data-i18n="table_subject">Subject</span></th><th scope="col"><span data-i18n="table_date">Date</span></th><th scope="col"><span class="visually-hidden" data-i18n="table_actions">Actions</span></th></tr></thead>
                   <tbody></tbody>
                 </table>
                 <div id="emails-responsive" class="emails-responsive" aria-live="polite"></div>
               </div>
             </div>
-
             <aside id="reader-pane" class="reader-pane" aria-label="Email reader" hidden></aside>
           </div>
         </section>
       </main>
 
-      <!-- Footer -->
       <footer role="contentinfo" class="site-footer reveal">
         <div class="footer-content">
-          <div class="footer-brand">
-            <span class="footer-word">TempMail<em>.</em></span>
-            <p>
-              <span data-i18n="footer_credits">Mehmet Kahya — 2025-2026 — TempMail v5.0 — </span>
-              <a href="https://www.guerrillamail.com" target="_blank" rel="noopener noreferrer">guerrillamail.com</a>
-            </p>
-            <p class="version" data-i18n="footer_release">October 2026 release</p>
-          </div>
-
+          <div class="footer-brand"><span class="footer-word">TempMail<em>.</em></span><p><span data-i18n="footer_credits">Mehmet Kahya — 2025-2026 — TempMail v5.0 — </span><a href="https://www.guerrillamail.com" target="_blank" rel="noopener noreferrer">guerrillamail.com</a></p><p class="version" data-i18n="footer_release">October 2026 release</p></div>
           <div class="footer-right">
             <div class="social">
-              <a
-                href="mailto:mehmetkahyakas5@gmail.com"
-                target="_blank"
-                title="Email"
-                aria-label="Send email"
-                data-i18n-title="aria_send_email"
-                data-i18n-aria-label="aria_send_email"
-              >
-                <i class="fa-regular fa-envelope"></i>
-              </a>
-              <a
-                href="https://github.com/mehmetkahya0"
-                target="_blank"
-                title="GitHub"
-                aria-label="GitHub profile"
-                data-i18n-title="aria_github_profile"
-                data-i18n-aria-label="aria_github_profile"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a
-                href="https://linkedin.com/in/mehmet-kahya-0861a4286"
-                target="_blank"
-                title="LinkedIn"
-                aria-label="LinkedIn profile"
-                data-i18n-title="aria_linkedin_profile"
-                data-i18n-aria-label="aria_linkedin_profile"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
+              <a href="mailto:mehmetkahyakas5@gmail.com" target="_blank" title="Email" aria-label="Send email" data-i18n-title="aria_send_email" data-i18n-aria-label="aria_send_email"><i class="fa-regular fa-envelope"></i></a>
+              <a href="https://github.com/mehmetkahya0" target="_blank" title="GitHub" aria-label="GitHub profile" data-i18n-title="aria_github_profile" data-i18n-aria-label="aria_github_profile" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+              <a href="https://linkedin.com/in/mehmet-kahya-0861a4286" target="_blank" title="LinkedIn" aria-label="LinkedIn profile" data-i18n-title="aria_linkedin_profile" data-i18n-aria-label="aria_linkedin_profile" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
-
             <div class="footer-buttons">
-              <button class="ghost-button" onclick="showWarning()">
-                <i class="fa-solid fa-triangle-exclamation"></i>
-                <span data-i18n="btn_disclaimer">Disclaimer</span>
-              </button>
-              <a class="ghost-button" href="privacy/privacy.html" target="_blank" rel="noopener noreferrer">
-                <i class="fa-solid fa-shield-halved"></i>
-                <span data-i18n="btn_privacy">Privacy Policy</span>
-              </a>
+              <button class="ghost-button" onclick="showWarning()"><i class="fa-solid fa-triangle-exclamation"></i><span data-i18n="btn_disclaimer">Disclaimer</span></button>
+              <a class="ghost-button" href="privacy/privacy.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-shield-halved"></i><span data-i18n="btn_privacy">Privacy Policy</span></a>
             </div>
           </div>
         </div>
       </footer>
     </div>
 
-    <!-- Welcome Message -->
     <div id="welcomeMessage" class="welcome-message" role="dialog" aria-labelledby="welcome-title">
       <div class="welcome-message-inner">
-        <div class="welcome-message-header">
-          <span class="eyebrow eyebrow-sm"><span class="eyebrow-dot"></span>v5</span>
-          <h3 id="welcome-title" data-i18n="welcome_header">Welcome to TempMail</h3>
-        </div>
+        <div class="welcome-message-header"><span class="eyebrow eyebrow-sm"><span class="eyebrow-dot"></span>v5</span><h3 id="welcome-title" data-i18n="welcome_header">Welcome to TempMail</h3></div>
         <div class="welcome-message-content">
-          <p data-i18n="welcome_p1">
-            Your temporary email address is being generated. Use it to sign up for
-            services without revealing your real email.
-          </p>
+          <p data-i18n="welcome_p1">Your temporary email address is being generated. Use it to sign up for services without revealing your real email.</p>
           <p class="welcome-tips-title"><strong data-i18n="welcome_tips_header">Tips:</strong></p>
-          <ul>
-            <li data-i18n="welcome_tip1">Press <kbd>?</kbd> to see keyboard shortcuts</li>
-            <li data-i18n="welcome_tip2">Enable auto-refresh to get emails instantly</li>
-            <li data-i18n="welcome_tip3">Click "New Address" if loading fails</li>
-            <li data-i18n="welcome_tip4">Press <kbd>⌘K</kbd> to open the command palette</li>
-          </ul>
+          <ul><li data-i18n="welcome_tip1">Press <kbd>?</kbd> to see keyboard shortcuts</li><li data-i18n="welcome_tip2">Enable auto-refresh to get emails instantly</li><li data-i18n="welcome_tip3">Click "New Address" if loading fails</li><li data-i18n="welcome_tip4">Press <kbd>⌘K</kbd> to open the command palette</li></ul>
           <p data-i18n="welcome_p3">Thank you for using this project! ❤️</p>
         </div>
-        <div class="welcome-message-actions">
-          <button onclick="hideWelcomeMessage()" class="primary-button btn-island">
-            <span data-i18n="btn_got_it">Got it!</span>
-            <span class="btn-icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-          </button>
-        </div>
+        <div class="welcome-message-actions"><button onclick="hideWelcomeMessage()" class="primary-button btn-island"><span data-i18n="btn_got_it">Got it!</span><span class="btn-icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span></button></div>
       </div>
     </div>
 
-    <!-- Keyboard shortcut hint -->
-    <button
-      class="shortcut-hint"
-      onclick="showShortcuts()"
-      title="Keyboard shortcuts"
-      data-i18n-title="tooltip_shortcuts"
-    >
-      <kbd>?</kbd> <span data-i18n="shortcut_hint_text">Shortcuts</span>
-    </button>
+    <button class="shortcut-hint" onclick="showShortcuts()" title="Keyboard shortcuts" data-i18n-title="tooltip_shortcuts"><kbd>?</kbd> <span data-i18n="shortcut_hint_text">Shortcuts</span></button>
+    <button id="scroll-top-btn" class="scroll-top-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Scroll to top" data-i18n-aria-label="aria_scroll_top"><i class="fa-solid fa-arrow-up"></i></button>
 
-    <!-- Scroll to top button -->
-    <button
-      id="scroll-top-btn"
-      class="scroll-top-btn"
-      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-      aria-label="Scroll to top"
-      data-i18n-aria-label="aria_scroll_top"
-    >
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>
-
-    <!-- Mobile FAB -->
     <div class="mobile-fab" id="mobile-fab">
       <div class="fab-actions" id="fab-actions">
-        <button
-          class="fab-action"
-          onclick="refreshMail(); toggleFab();"
-          aria-label="Refresh"
-          data-i18n-aria-label="btn_refresh"
-        >
-          <i class="fa-solid fa-rotate"></i>
-        </button>
-        <button
-          class="fab-action"
-          onclick="genEmail(); toggleFab();"
-          aria-label="New Address"
-          data-i18n-aria-label="btn_new"
-        >
-          <i class="fa-solid fa-wand-magic-sparkles"></i>
-        </button>
-        <button
-          class="fab-action"
-          onclick="copyEmail(); toggleFab();"
-          aria-label="Copy"
-          data-i18n-aria-label="copy_email"
-        >
-          <i class="fa-regular fa-copy"></i>
-        </button>
+        <button class="fab-action" onclick="refreshMail(); toggleFab();" aria-label="Refresh" data-i18n-aria-label="btn_refresh"><i class="fa-solid fa-rotate"></i></button>
+        <button class="fab-action" onclick="genEmail(); toggleFab();" aria-label="New Address" data-i18n-aria-label="btn_new"><i class="fa-solid fa-wand-magic-sparkles"></i></button>
+        <button class="fab-action" onclick="copyEmail(); toggleFab();" aria-label="Copy" data-i18n-aria-label="copy_email"><i class="fa-regular fa-copy"></i></button>
       </div>
-      <button
-        class="fab-main"
-        id="fab-main"
-        onclick="toggleFab()"
-        aria-label="Quick actions"
-        data-i18n-aria-label="aria_quick_actions"
-      >
-        <span class="fab-line"></span>
-        <span class="fab-line"></span>
-      </button>
+      <button class="fab-main" id="fab-main" onclick="toggleFab()" aria-label="Quick actions" data-i18n-aria-label="aria_quick_actions"><span class="fab-line"></span><span class="fab-line"></span></button>
     </div>
 
-    <!-- Interaction scripts -->
     <script>
-      // Mobile FAB toggle
-      function toggleFab() {
-        const btn = document.getElementById("fab-main");
-        const actions = document.getElementById("fab-actions");
-        btn.classList.toggle("open");
-        actions.classList.toggle("show");
-      }
-
-      // Close FAB on outside click
-      document.addEventListener("click", (e) => {
-        const fab = document.getElementById("mobile-fab");
-        if (fab && !fab.contains(e.target)) {
-          document.getElementById("fab-main")?.classList.remove("open");
-          document.getElementById("fab-actions")?.classList.remove("show");
-        }
-      });
-
+      function toggleFab() { const btn = document.getElementById("fab-main"); const actions = document.getElementById("fab-actions"); btn.classList.toggle("open"); actions.classList.toggle("show"); }
+      document.addEventListener("click", (e) => { const fab = document.getElementById("mobile-fab"); if (fab && !fab.contains(e.target)) { document.getElementById("fab-main")?.classList.remove("open"); document.getElementById("fab-actions")?.classList.remove("show"); } });
       document.addEventListener("DOMContentLoaded", () => {
-        // Scroll entry reveals
         const items = document.querySelectorAll(".reveal");
-        if ("IntersectionObserver" in window) {
-          const io = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("in");
-                  io.unobserve(entry.target);
-                }
-              });
-            },
-            { threshold: 0.12, rootMargin: "0px 0px -6% 0px" },
-          );
-          items.forEach((el) => io.observe(el));
-        } else {
-          items.forEach((el) => el.classList.add("in"));
-        }
-
-        // Scroll-to-top + nav condense, driven by a sentinel instead of scroll events
-        const sentinel = document.createElement("div");
-        sentinel.className = "scroll-sentinel";
-        sentinel.setAttribute("aria-hidden", "true");
-        document.body.prepend(sentinel);
-        if ("IntersectionObserver" in window) {
-          new IntersectionObserver(([entry]) => {
-            const scrolled = !entry.isIntersecting;
-            document.getElementById("scroll-top-btn")?.classList.toggle("visible", scrolled);
-            document.documentElement.classList.toggle("is-scrolled", scrolled);
-          }).observe(sentinel);
-        }
+        if ("IntersectionObserver" in window) { const io = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add("in"); io.unobserve(entry.target); } }); }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }); items.forEach((el) => io.observe(el)); } else { items.forEach((el) => el.classList.add("in")); }
+        const sentinel = document.createElement("div"); sentinel.className = "scroll-sentinel"; sentinel.setAttribute("aria-hidden", "true"); document.body.prepend(sentinel);
+        if ("IntersectionObserver" in window) { new IntersectionObserver(([entry]) => { const scrolled = !entry.isIntersecting; document.getElementById("scroll-top-btn")?.classList.toggle("visible", scrolled); document.documentElement.classList.toggle("is-scrolled", scrolled); }).observe(sentinel); }
       });
     </script>
 
-    <!-- Welcome Message Logic -->
     <script>
-      function hideWelcomeMessage() {
-        const welcomeMessage = document.getElementById("welcomeMessage");
-        welcomeMessage.classList.remove("show");
-        welcomeMessage.classList.add("leaving");
-
-        if (typeof confetti === "function") {
-          confetti({
-            particleCount: 110,
-            spread: 150,
-            origin: { y: 0.85 },
-            colors: ["#D4FF3F", "#A99BFF", "#F2F1EC", "#7CF5C8"],
-            startVelocity: 38,
-            gravity: 1.15,
-            scalar: 0.7,
-            ticks: 120,
-          });
-        }
-
-        setTimeout(() => {
-          welcomeMessage.remove();
-          localStorage.setItem("welcomeMessageSeen", "true");
-        }, 600);
-      }
-
-      document.addEventListener("DOMContentLoaded", () => {
-        if (!localStorage.getItem("welcomeMessageSeen")) {
-          setTimeout(() => {
-            const welcomeMessage = document.getElementById("welcomeMessage");
-            if (welcomeMessage) welcomeMessage.classList.add("show");
-          }, 900);
-        } else {
-          const wm = document.getElementById("welcomeMessage");
-          if (wm) wm.remove();
-        }
-      });
+      function hideWelcomeMessage() { const welcomeMessage = document.getElementById("welcomeMessage"); welcomeMessage.classList.remove("show"); welcomeMessage.classList.add("leaving"); if (typeof confetti === "function") { confetti({ particleCount: 110, spread: 150, origin: { y: 0.85 }, colors: ["#D4FF3F", "#A99BFF", "#F2F1EC", "#7CF5C8"], startVelocity: 38, gravity: 1.15, scalar: 0.7, ticks: 120 }); } setTimeout(() => { welcomeMessage.remove(); localStorage.setItem("welcomeMessageSeen", "true"); }, 600); }
+      document.addEventListener("DOMContentLoaded", () => { if (!localStorage.getItem("welcomeMessageSeen")) { setTimeout(() => { const welcomeMessage = document.getElementById("welcomeMessage"); if (welcomeMessage) welcomeMessage.classList.add("show"); }, 900); } else { const wm = document.getElementById("welcomeMessage"); if (wm) wm.remove(); } });
     </script>
 
-    <!-- App scripts -->
     <script src="js/config.js" type="module"></script>
     <script src="js/api.js" type="module"></script>
     <script src="js/theme.js" type="module"></script>
